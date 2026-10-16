@@ -1,0 +1,4 @@
+- insert:
+    - id: oheco-session-retry
+      name: '@oheco/dsh-session-retry'
+      config: {}

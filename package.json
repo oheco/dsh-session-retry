@@ -1,0 +1,21 @@
+{
+  "name": "@oheco/dsh-session-retry",
+  "version": "0.1.0",
+  "description": "DSH 会话自动重试：无限模型请求重试、无响应超时恢复和原生重试提示",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/oheco/dsh-session-retry.git" },
+  "exports": { ".": "./index.js", "./package.json": "./package.json" },
+  "files": ["index.js", "config.js", "stream.js", "cordis.patch.yml", "README.md", "VERIFICATION.md", "LICENSE"],
+  "scripts": {
+    "check": "node --check index.js && node --check config.js && node --check stream.js",
+    "test": "node --import ./test/runtime-loader.js --test test/*.test.js"
+  },
+  "engines": { "node": ">=24" },
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": "*",
+    "@deepseek-ai/dsh-llm": "*"
+  },
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } }
+}
